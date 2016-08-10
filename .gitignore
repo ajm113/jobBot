@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.class
+*~
+*.DS_Store
+wine-py2exe/
+py2exe.log
+MANIFEST
+
+# IntelliJ related files
+.idea
+*.iml
+
+tmp/

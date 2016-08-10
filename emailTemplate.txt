@@ -1,0 +1,35 @@
+From: %fromEmail%
+To: %toEmail%
+MIME-Version: 1.0
+Content-type: text/html
+Subject: %subject%
+Reply-To: %replyEmail%
+
+<p>Hello,</p>
+
+<p>
+my name is <i>Joe Awesome</i>! Experience includes 3 years of awesome customer service, and one year of management experience at <i>Sophia’s House</i> (<i>Phoenix Dream Center</i>). Determination leading the best environment, and going beyond customer’s expectations, helping a company strive for success!
+</p>
+<p>
+URL is attached to this memo that provides my most up to date resume on <i>Google Docs</i> for further review, available any time for interview. Available any time of the day for work hours, including holidays, and accepting full time positions.
+</p>
+<p>
+Thank you for your time,
+</p>
+<p>
+<b>Joe Awesome</b><br>
+myemailaddress@gmail.com<br>
+(555) 555 - 5555<br>
+123 E Road Ave Street<br>
+City, State Zip
+</p>
+<p>
+Resume: <a href="http://www.google.com">Google Doc Resume</a>
+</p>
+<p>
+(copy n' paste if resume link does not redirect you.)
+http://www.google.com
+</p>
+<p>
+<a href="%url%">%url%</a>
+</p>
