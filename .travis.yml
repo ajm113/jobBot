@@ -8,7 +8,6 @@ python:
   - "3.5"
 sudo: false
 install:
-  - pip install .
   - pip install -r requirements.txt
 script: nosetests test --verbose
 notifications:
