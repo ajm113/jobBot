@@ -10,6 +10,5 @@ Simply pass in the requested parameters, and let Job Bot go!
 ## Python Support
 
 - 2.7
-- 3.2
 - 3.3
 - 3.5
