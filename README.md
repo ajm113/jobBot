@@ -6,3 +6,10 @@
 Job bot is a simple job searching bot! Say goodbye to using recuiting agencies, and wasting houndereds of hours!
 
 Simply pass in the requested parameters, and let Job Bot go!
+
+## Python Support
+
+- 2.7
+- 3.2
+- 3.3
+- 3.5
