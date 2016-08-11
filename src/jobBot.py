@@ -116,7 +116,7 @@ def crawlCraigslist(args):
 						'password': args.password
 					}
 
-					jobMailer.emailEmployeer(['andrewmcrobb@gmail.com'], args.login, args.email, emailSubject, post, args.template, smtpSettings)
+					jobMailer.emailEmployeer(foundEmails, args.login, args.email, emailSubject, post, args.template, smtpSettings)
 				
 			print ("All done! Going to sleep...")
 			time.sleep(args.fall
