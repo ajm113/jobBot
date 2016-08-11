@@ -11,7 +11,7 @@ config = {
     'download_url': '',
     'author_email': 'andrewmcrobb@gmail.com',
     'version': '0.1',
-    'install_requires': ['smtplib', 'PyQuery', 'sqlite3'],
+    'install_requires': ['smtplib', 'PyQuery'],
     'packages': ['jobBot'],
     'scripts': [],
     'name': 'jobBot'

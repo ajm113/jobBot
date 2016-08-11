@@ -11,4 +11,9 @@ MANIFEST
 .idea
 *.iml
 
+# Vagrant
+Vagrantfile
+.vagrant/*
+
+
 tmp/

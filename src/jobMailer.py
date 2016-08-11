@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def emailEmployeer(emails, emailFrom, emailReplyTo, title, postUrl, templateFilePath):
+import smtplib
+
+def emailEmployeer(emails, emailFrom, emailReplyTo, title, postUrl, templateFilePath, smtpSettings):
 	
 	template = ''
 	
@@ -14,12 +16,12 @@ def emailEmployeer(emails, emailFrom, emailReplyTo, title, postUrl, templateFile
 		template = template.replace("%replyEmail%", emailReplyTo)
 		template = template.replace("%url%", postUrl)
 		try:
-			smtpObj = smtplib.SMTP(smtpHost)
+			smtpObj = smtplib.SMTP(smtpSettings['host'])
 			smtpObj.ehlo()
 			smtpObj.starttls()
 			smtpObj.ehlo()
-			smtpObj.login(smtpEmail,smtpPass)
-		   	smtpObj.sendmail(smtpEmail, emails, template)
+			smtpObj.login(smtpSettings['login'], smtpSettings['password'])
+		   	smtpObj.sendmail(smtpSettings['login'], emails, template)
 			smtpObj.quit()
 		except smtplib.SMTPException, e:
 			print e
