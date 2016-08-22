@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-import argparse, time
+# -*- coding: utf-8 -*-
+import argparse, time, sys
 
 def parseArguments():
 	parser = argparse.ArgumentParser(description='Search for jobs via craigslist!')
@@ -123,6 +124,8 @@ def crawlCraigslist(args):
 			break
 
 def main():
+	reload(sys)
+	sys.setdefaultencoding('utf8')
 	crawlCraigslist(parseArguments())
 
 if __name__ == '__main__':
