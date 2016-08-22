@@ -100,15 +100,12 @@ def crawlCraigslist(args):
 				foundEmails += jobCrawler.crawlCraigsListPostAjaxContactInfo(args.url, post, args.agent, args.abbreviation)
 				time.sleep(args.wait)
 
-				print foundEmails
-
 				# Insert the post into our db.
 				jobDatabase.insertPost(sqlConnection, post)
 
 				# Send the emails if everything checks out!
 				if args.dry != True & len(foundEmails) > 0:
 					emailSubject = "Re: %s" % (postData['title'])
-					print "Sending '%s'!" % (emailSubject)
 
 					smtpSettings = {
 						'host': args.server,
@@ -119,10 +116,9 @@ def crawlCraigslist(args):
 					jobMailer.emailEmployeer(foundEmails, args.login, args.email, emailSubject, post, args.template, smtpSettings)
 				
 			print ("All done! Going to sleep...")
-			time.sleep(args.fall
-				)
+			time.sleep(args.fall)
 		except KeyboardInterrupt:
-			print "Keyboard Interrupt detected! Shutting down!"
+			print ("Keyboard Interrupt detected! Shutting down!")
 			jobDatabase.closeConnection(sqlConnection)
 			break
 
