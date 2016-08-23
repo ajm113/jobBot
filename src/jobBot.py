@@ -82,10 +82,9 @@ def crawlCraigslist(args):
 
 			print ("Excluding any posts we already searched...")
 			# Exlucde any we already went through.
-			jobDatabase.fetchByPosts(sqlConnection, foundPosts)
-			for row in sqlConnection['cursor']:
+			for row in jobDatabase.fetchByPosts(sqlConnection, foundPosts):
 				if row[0] in foundPosts:
-					 foundPosts.remove(row[0])	# Remove if found in result.
+					foundPosts.remove(row[0])	# Remove if found in result.
 
 			print ("Looking for jobs...")
 			# Now iterate over our found posts, find if we can appy!

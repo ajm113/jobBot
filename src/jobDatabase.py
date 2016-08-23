@@ -13,7 +13,7 @@ def initalizeDatabase(databaseFilename):
 	return {'connection' : connection, 'cursor' : cursor}
 
 def fetchByPosts(conn, posts):
-	conn['connection'].execute('SELECT uid FROM posts WHERE uid IN (%s)' %','.join('?'*len(posts)), posts)
+	return conn['connection'].execute('SELECT uid FROM posts WHERE uid IN (%s)' %','.join('?'*len(posts)), posts)
 
 def insertPost(conn, post):
 	t = (post,)
